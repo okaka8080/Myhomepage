@@ -23,6 +23,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import HomeIcon from '@mui/icons-material/Home';
 import SvgIcon from '@mui/material/SvgIcon';
 import {  BrowserRouter, Link, NavLink } from 'react-router-dom';
+import { colors } from '@mui/material';
 
 
 const drawerWidth = 240;
@@ -92,7 +93,7 @@ const current = {
 
 export const Pagelink = (props : any) =>{
     return (
-        <a href={props.url} >
+        <a href={props.url} style={{color:'black' ,textDecoration : 'none'}}>
         <ListItem key={props.text} disablePadding>
         <ListItemButton >
         <ListItemIcon>
@@ -158,7 +159,6 @@ export const Header = (props : any) => {
           </IconButton>
         </DrawerHeader>
         <Divider />
-        <BrowserRouter>
         <List>
             <Pagelink text = "Top" component = {HomeIcon} url = "/"/>
             <Pagelink text = "Profile" component = {AccountCircleIcon} url="/Profile"/>
@@ -177,7 +177,6 @@ export const Header = (props : any) => {
             </ListItem>
           ))}
         </List>
-        </BrowserRouter>
       </Drawer>
       <Main open={open}>
         <DrawerHeader />

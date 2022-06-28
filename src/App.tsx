@@ -9,7 +9,7 @@ import { Works } from "./pages/Works";
 function App()  {
   return (
     <div className="app">
-    <BrowserRouter>
+      <BrowserRouter>
       <Switch>
         <Route exact path="/">
           <TopPage />
@@ -21,7 +21,7 @@ function App()  {
           <Works />
         </Route>
       </Switch>
-    </BrowserRouter>
+      </BrowserRouter>
   </div>
   );
 };
