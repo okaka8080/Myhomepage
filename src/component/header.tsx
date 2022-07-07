@@ -160,22 +160,13 @@ export const Header = (props : any) => {
         </DrawerHeader>
         <Divider />
         <List>
-            <Pagelink text = "Top" component = {HomeIcon} url = "/"/>
-            <Pagelink text = "Profile" component = {AccountCircleIcon} url="/Profile"/>
-            <Pagelink text = "Works" component = {ArticleIcon} url="/Works"/>
+          <Pagelink text = "Top" component = {HomeIcon} url = "/"/>
+          <Pagelink text = "Profile" component = {AccountCircleIcon} url="/Profile"/>
+          <Pagelink text = "Works" component = {ArticleIcon} url="/Works"/>
         </List>
         <Divider />
         <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
+          <Pagelink text = "Contact" component = {ArticleIcon} url="/Works"/>
         </List>
       </Drawer>
       <Main open={open}>
